@@ -10,6 +10,8 @@
   padding-top: 129px;
   padding-bottom: 70px;
 
+
+
   &__title {
     font-family: 'Montserrat', sans-serif;
 
@@ -56,6 +58,7 @@
 
   &__item {
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-right: 10px;
 

@@ -1,6 +1,8 @@
 @import "./reset";
+@import "./header";
 @import "./revolutionary-editor";
-@import "here-is-what-you-get";
+@import "./here-is-what-you-get";
+@import "./people-are-talking";
 
 
 .container {
@@ -8,15 +10,17 @@
   padding: 0 10px;
   margin: 0 auto;
 
+
   @media (min-width: 320px) {
     width: 320px;
   }
-
   @media (min-width: 481px) {
     width: 768px;
   }
+
   @media (min-width: 993px) {
     width: 1200px;
   }
+
 }
 
