@@ -1,0 +1,67 @@
+@mixin flex-col-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-col-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin eye-icon {
+    font-family: "icomoon";
+    content: "\e9ce"
+}
+
+@mixin star-icon {
+    font-family: "icomoon";
+    content: "\e9d9";
+}
+
+@mixin fork-icon {
+    font-family: "icomoon";
+    content: "\e900";
+}
+
+@mixin icon-item-padding {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@mixin montserrat-400 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+@mixin montserrat-700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+@mixin lato-400 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+@mixin lato-italic-700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}

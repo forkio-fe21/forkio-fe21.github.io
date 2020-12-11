@@ -1,0 +1,266 @@
+.fork-sub-pricing {
+    @include flex-center;
+        background-image: url("../fork-sub-pricing-bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+            // position: relative;
+            
+        }
+        
+        .fork-sub-pricing-blur-layer {
+            @include flex-center;
+    // background-color: #bebebe;
+//     background: inherit;
+//     position: relative;
+    width: 100%;
+    height: 100%;
+}
+// .fork-sub-pricing-blur-layer::after {
+
+//     content: "";
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     background: inherit;
+//     filter: blur(30px);
+// }
+
+.fork-sub-pricing-container {
+    padding-left: 10px; padding-right: 10px;
+    
+}
+
+.fork-sub-pricing-header__text, .price-details__value {
+    @include montserrat-700;
+    color: #fff;
+}
+
+.prices-item__header, .price-details__per-month, .price-details__privilege, .prices-item__purchase, .price-details__value--dollar,
+.prices-item-selected__header, .price-details__privilege--selected {@include montserrat-400; text-align: center;}
+.price-details__per-month {font-size: 14px;}
+.price-details__privilege, .price-details__privilege--selected, .prices-item__purchase {font-size: 16px;}
+.price-details__value {font-size: 60px;}
+.price-details__value--selected {font-size: 82px;}
+.prices-item__purchase {
+    width: 163px; height: 45px;
+    @include montserrat-400;
+    border: none;
+    border-radius: 32px;
+    background-color: rgba($color: #fff, $alpha: 0.2);
+}
+.prices-item-selected__purchase {
+    width: 190px; height: 52px;
+    @include montserrat-400;
+    border: none;
+    border-radius: 32px;
+    background-color: rgba($color: #fff, $alpha: 0.2);
+}
+
+.prices {list-style: none; padding: 0; margin: 0;}
+
+.prices {
+    
+    // height: 2000px;
+    // width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+
+    .price-details__privilege {
+        line-height: 28px;
+    }
+}
+
+.prices-item {
+
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    width: 257px;
+    height: 457px;
+    &__header {
+        background-color: rgba($color: #fff, $alpha: 0.1);
+        height: 97px;
+        font-size: 24px;
+        color: #fff;
+        @include flex-center;
+    }
+}
+
+.prices-item-selected {
+    background-color: rgba($color: #463048, $alpha: 0.9);
+    width: 300px;
+    height: 560px;
+    &__header {
+        background-color: rgba($color: #000, $alpha: 0.1);
+        height: 111px;
+        font-size: 24px;
+        color: #fff;
+        @include flex-center;
+    }
+    .selected-price-details {
+        height: 411px;
+    }
+}
+
+.price-details {
+    height: 324px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &__per-month::after {
+        content: "";
+        display: block;
+        height: 5px; width: 60px;
+        background-color: #8D81AC;
+        margin: 37px auto 0;
+    }
+}
+
+// ========== MOBILE OUTCOME ==========
+
+.fork-sub-pricing {
+    @media (min-width: 320px) and (max-width: 480px) {
+        
+        .fork-sub-pricing-header__text {font-size: 28px; text-align: center;}
+
+        .fork-sub-pricing-container {
+
+            min-width: 320px;
+            width: 320px;
+            height: 2100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        .prices {
+            // background-color: cornflowerblue;
+            height: 2000px;
+            min-width: 300px;
+            width: 100%;
+        }
+        .price-item-holder {height: 457px; width: 257px;}
+    }
+}
+
+// ========== TABLET OUTCOME ==========
+
+.fork-sub-pricing {
+    @media (min-width: 481px) and (max-width: 992px) {
+        .fork-sub-pricing-header__text {font-size: 42px; text-align: center; margin: 42px 0 10px;}
+        
+        .fork-sub-pricing-container {
+            // max-width: 992px;
+            min-width: 481px;
+            width: 768px;
+            min-height: 1250px;
+            // max-height: 2000px;
+            // min-width: 481px;
+            // width: 625px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .prices {
+            // background-color: cornflowerblue;
+            min-width: 481px;
+            // min-width: 100%;
+            // width: 625px;
+            max-width: 625px;
+            min-height: 1050px;
+            // max-height: 1050px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            align-items: center;
+                
+            }
+            
+            .price-item-holder {
+                margin: 5px;
+                // background-color: coral;
+                height: 560px;
+                width: 300px;
+            }
+            .price-item-holder--tablet-top-right {
+                display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            height: 457px;
+        }
+        .price-item-holder--tablet-top-left {
+            height: 457px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .price-item-holder--tablet-bottom-right {
+            height: 457px;
+            display: flex;
+            align-items: center;
+        }
+        
+    }
+}
+
+// ========== DESKTOP OUTCOME ==========
+
+.fork-sub-pricing {
+
+    @media (min-width: 993px) {
+        .fork-sub-pricing-header__text {font-size: 48px; text-align: center;}
+
+        
+        .fork-sub-pricing-container {
+            min-width: 993px;
+            // width: 100%;
+            width: 1200px;
+            height: 847px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .prices {
+            // background-color: cornflowerblue;
+            min-width: 993px;
+            width: 100%;
+            // width: 1150px;
+            // max-width: 1150px;
+            height: 560px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+        }
+
+        .price-item-holder {
+            // min-width: 200px;
+            height: 457px;
+            width: 257px;
+        }
+        
+        .prices-item {
+            min-width: 100%;
+            width: 100%;
+            height: 100%;
+            // width: 257px;
+            // height: 457px;
+        }
+        .prices-item-selected {
+            min-width: 250px;
+        }
+            
+    }
+}
