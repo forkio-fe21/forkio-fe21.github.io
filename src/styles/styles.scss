@@ -1,22 +1,28 @@
 @import "./reset";
-@import "./revolutionary-editor";
-@import "here-is-what-you-get";
+@import "./header";
+@import "./header-bg";
+@import "./here-is-what-you-get";
+@import "./people-are-talking";
 
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 10px;
   margin: 0 auto;
+
 
   @media (min-width: 320px) {
     width: 320px;
   }
-
   @media (min-width: 481px) {
-    width: 768px;
+    width: 100%;
   }
+
   @media (min-width: 993px) {
-    width: 1200px;
+    width: 100%;
   }
+
+
+
 }
 
