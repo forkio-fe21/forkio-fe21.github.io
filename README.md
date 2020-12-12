@@ -1,1 +1,1 @@
-Student 2 - Valery Shvets
+Student 2 - Valery Shvets a.k.a Pagan Seacrest: Revolutionaru Editor, Here is what you get, Fork Subscribtion Pricing.
