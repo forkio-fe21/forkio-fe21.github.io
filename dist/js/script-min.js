@@ -1,0 +1,1 @@
+console.log("minify test");let v=30,x=30;

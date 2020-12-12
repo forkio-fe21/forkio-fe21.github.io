@@ -1,110 +1,132 @@
-@import './vars';
 
-
-.revolutionary-editor {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 129px;
-  padding-bottom: 70px;
-
-  &__title {
-    font-family: 'Montserrat', sans-serif;
-
-    text-transform: $uppercase;
-    font-weight: $title-weight;
-    color: #635C73;
-    padding-bottom: 35px;
-
-    @media (min-width: 320px) {
-      font-size: 30px;
-      line-height: 30px;
-    }
-
-    @media (min-width: 481px) {
-      font-size: 54px;
-      line-height: 54px;
-    }
-  }
-
-  &__des {
-    font-family: 'Lato', sans-serif;
-    font-size: 21px;
-    line-height: 32px;
-    font-weight: 400;
-    color: #323232;
-    padding-bottom: 20px;
-  }
+.rev-editor {
+    display: flex;
 }
 
-.icons-container {
-  display: flex;
-  justify-content: space-between;
+.rev-editor-header__text {
+    @include montserrat-700;
+    text-transform: uppercase;
+    color: #635C73;
+    text-align: center;
+}
 
+.rev-editor-article__text {
+    @include lato-400;
+    color: #332233;
+    text-align: center;
+}
 
-  @media (min-width: 320px) {
-    flex-wrap: wrap;
-    width: 250px;
-  }
+.rev-editor__marker-container {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: center;
+}
+.rev-editor__marker-item {
+    width: 150px;
+    height: 45px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  @media (min-width: 481px) {
-    flex-wrap: nowrap;
-    width: 365px;
-  }
-
-  &__item {
+.rev-editor__marker-item-icon {
+    width: 90px;
+    height: 26px;
+    background-color: #ebe8e8;
     display: flex;
     align-items: center;
-    margin-right: 10px;
+    border: 1px solid #8f8f8f;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.rev-editor__marker-item-icon-title {
+    margin: auto;
+    font-size: 14px;
+    @include montserrat-700;
+}
 
-    @media (min-width: 320px) {
-      width: 100px;
-      margin-bottom: 10px;
+.rev-editor__marker-item-number {
+    width: 60px;
+    height: 26px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border: 1px solid #8f8f8f;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.rev-editor__marker-item-number-value {
+    font-size: 14px;
+    @include montserrat-700;
+    margin: auto;
+}
+
+.rev-editor__marker-item-icon-title--eye::before { @include eye-icon; margin-right: 3px;}
+.rev-editor__marker-item-icon-title--star::before { @include star-icon; margin-right: 3px;}
+.rev-editor__marker-item-icon-title--fork::before { @include fork-icon; margin-right: 3px;}
+
+
+
+// ========== MOBILE OUTCOME ==========
+
+.rev-editor {
+    @media (min-width:320px) and (max-width: 480px) {
+        @include flex-col-container;
+        .rev-editor-container {
+            margin: auto;
+            width: 320px;
+            height: 473px;
+            @include flex-col-container;
+        }
+        .rev-editor-header {margin: 0;}
+        .rev-editor-article {margin: 0 10px 15px}
+        .rev-editor-header__text {font-size: 26px;}
+        .rev-editor-article__text {font-size: 14px;}
     }
+    
+}
 
-    @media (min-width: 481px) {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
+// ========== TABLET OUTCOME ==========
+
+.rev-editor {
+    @media (min-width: 481px) and (max-width: 992px) {
+        @include flex-col-container;
+        .rev-editor-container {
+            margin: auto;
+            min-width: 481px;
+            max-width: 768px;
+            height: 431px;
+            @include flex-col-container;
+        }
+
+
+        .rev-editor-header, .rev-editor-article {margin-bottom: 20px;}
+        .rev-editor-article, .rev-editor-header, .rev-editor__marker-container {padding: 10px;}
+        .rev-editor-header__text {font-size: 42px; margin: 0;}
+        .rev-editor-article__text {font-size: 21px; margin: 0;}
+        .rev-editor__marker-item {height: 26px;}
     }
+}
 
-    &:last-child {
-      margin-right: 0;
+// ========== DESKTOP OUTCOME ==========
+
+.rev-editor {
+    @media (min-width: 993px) {
+        @include flex-col-container;
+        .rev-editor-container {
+            margin: auto;
+            min-width: 993px;
+            max-width: 1200px;
+            height: 391px;
+            @include flex-col-container;
+        }
+        .rev-editor-header, .rev-editor-article {margin-bottom: 20px;}
+        .rev-editor-article {width: 861px;}
+        .rev-editor-header__text {font-size: 54px; margin: 0;}
+        .rev-editor-article__text {font-size: 21px; margin: 0;}
+        .rev-editor__marker-item {height: 26px;}
     }
-  }
 }
-
-.svg-name {
-  padding: 0 5px;
-  text-transform: capitalize;
-
-}
-
-.icon-number, .svg-container {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: $title-weight;
-  font-size: 14px;
-  padding: 5px 5px;
-
-}
-
-.svg-container {
-  display: flex;
-  align-items: center;
-  border-radius: 5px 0 0 5px;
-  border: 1px solid #aba5b8;
-
-}
-
-
-.icon-number {
-  border-bottom: 1px solid #aba5b8;
-  border-top: 1px solid #aba5b8;
-  border-right: 1px solid #aba5b8;
-  border-radius: 0 5px 5px 0;
-  padding: 7px 5px;
-}
-
-
