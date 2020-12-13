@@ -25,7 +25,7 @@
 .prices-item__header, .price-details__per-month, .price-details__privilege, .prices-item__purchase, .price-details__value--dollar,
 .prices-item-selected__header, .price-details__privilege--selected {@include montserrat-400; text-align: center;}
 .price-details__per-month {font-size: 14px;}
-.price-details__privilege, .price-details__privilege--selected, .prices-item__purchase {font-size: 16px;}
+.price-details__privilege, .price-details__privilege--selected, .prices-item__purchase, .prices-item-selected__purchase {font-size: 16px;}
 .price-details__value {font-size: 60px;}
 .price-details__value--selected {font-size: 82px;}
 .prices-item__purchase {
